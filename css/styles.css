@@ -1,0 +1,186 @@
+:root {
+    --main-bg-color: #fff;
+    --secondary-bg-color: #f2f2f2;
+    --main-text-color: #444;
+    --secondary-text-color: #000000;
+    --main-accent-color: #98b880;
+    --secondary-accent-color: #d2e6c4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    font-family: "Tektur", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    
+    background-color: var(--secondary-bg-color);
+}
+
+.page__header {
+    padding: 10px 0 0;
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+    text-align: center;
+}
+
+.header__title {
+    color: rebeccapurple;
+}
+
+@media(max-width: 500px) {
+    .header__title {
+        font-size: 1.3em; 
+    }
+}
+
+.menu {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background: var(--main-bg-color);
+    border-top: 2px solid var(--main-text-color);
+    border-bottom: 2px solid var(--main-text-color);
+}
+
+.menu__link {
+    margin: -2px;
+    border: 2px solid var(--main-text-color);
+    padding: 7px 17px;
+    color: var(--main-text-color);
+    background: var(--main-bg-color);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.menu__link_active {
+    color: var(--secondary-text-color);
+}
+
+.menu__link:hover {
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-bg-color);
+}
+
+@media(max-width: 500px) {
+    .menu__ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.main__title {
+    text-align: center;
+}
+
+.page__main {
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+    max-width: 1100px;
+    overflow: hidden;
+    margin: 25px auto;
+    padding: 20px;
+}
+
+.shop {
+    justify-content: center;
+    padding: 4px;
+    margin: 4px;
+    border: 2px solid var(--main-text-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    margin: 4px;
+    border: 2px solid var(--main-text-color);
+    flex: 1 1 0px;
+}
+
+.product__image {
+    max-height: 180px;
+    max-width: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image_holder {
+    display: block;
+    margin: 2px auto;
+    height: 180px;
+    width: 180px;
+}
+
+.product__category {
+    font-size: small;
+}
+
+.product__title {
+    color: var(--secondary-text-color);
+}
+
+.product__price {
+    color: var(--secondary-text-color);
+    font-weight: 600; 
+    font-size: larger;
+    text-align: right;
+    margin-top: auto;
+}
+
+.task__label {
+    padding: 4px;
+    margin: 4px;
+    flex-basis: 50%;
+}
+
+.nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+@media(max-width: 500px) {
+    .task__container {
+        flex-direction: column;
+    }
+}
+
+.task__button {
+    font-family: inherit;
+    color: var(--main-text-color);
+    padding: 4px;
+    margin: 4px;
+    border: 2px solid var(--main-text-color);
+    background-color: var(--main-bg-color);
+    transition: all 0.3s ease-in-out;
+    flex-basis: 50%;
+}
+
+.task__button:hover {
+    color: var(--secondary-text-color);
+    border-color: var(--secondary-text-color);
+    cursor: pointer;
+}
+
+.task__button:active {
+    background-color: var(--secondary-bg-color);
+}
+
+.page__footer {
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+    padding: 10px 0;
+    text-align: center;
+}
