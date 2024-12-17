@@ -1,6 +1,7 @@
 const shop = document.getElementById("shop");
 const template = document.getElementById("product");
 const amount = 30;
+let total = amount;
 let page = 1;
 
 function updatePage(n) {
@@ -8,6 +9,10 @@ function updatePage(n) {
     if (page < 1) {
         page = 1;
         return; 
+    }
+    else if (page > Math.ceil(total/amount)) {
+        page = Math.ceil(total/amount);
+        return;
     }
     document.getElementById("page_number").innerHTML = page;
     clearTemplates();
@@ -29,6 +34,7 @@ function clearTemplates() {
 
 
 function fillData(data) {
+    total = data.total;
     let products = shop.getElementsByClassName("product");
     for (let i = 0; i < products.length; i++) {
         if (i < data.products.length){
